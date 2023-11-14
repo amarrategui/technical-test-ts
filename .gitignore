@@ -1,0 +1,54 @@
+# compiled output
+/dist
+/dist-layers
+/node_modules
+/mtn-rica-integration/node_modules
+.terraform*
+terraform*
+.infracost*
+tfplan.binary
+plan.json
+cost.html
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.localEnv
+.env
+.devtools
+mtn-rica-integration.zip
+
+# TMF Artifacts
+
+test/ctk/ctk/node_modules
+test/ctk/*Results.*
+test/ctk/config.json

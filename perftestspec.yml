@@ -1,0 +1,47 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  build:
+    on-failure: ABORT
+    commands:
+      - |
+        if [ "$BM_TEST_ID" = "" ]; then
+          echo "No Test Defined" && exit 111;
+        fi
+      - |
+        if [ "$BM_FOLDER_ID" = "" ]; then
+          echo "No Test Script Folder Defined" && exit 112;
+        fi
+      - aws secretsmanager get-secret-value --secret-id cat28-cicd-sm --query SecretString --output text > /tmp/catsec
+      - export TEST_USER=`jq -j .test_user /tmp/catsec`
+      - export TEST_PWD=`jq -j .test_password /tmp/catsec`
+      - export TEST_CLIENT=`jq -j .test_client_id /tmp/catsec`
+
+      - export BM_KEY_ID=`jq -j .blazemeter_key_id /tmp/catsec`
+      - export BM_KEY_SEC=`jq -j .blazemeter_key_secret /tmp/catsec`
+
+      - |
+        if [ "$BM_KEY_ID" = "" ]; then
+          echo "Blazemeter Key not found" && exit 113;
+        fi
+
+      - curl -s -H "Content-Type:application/json" --user "$BM_KEY_ID:$BM_KEY_SEC" -o signed_api.json https://a.blazemeter.com/api/v4/folders/$BM_FOLDER_ID/s3/sign?fileName=prodspec_perf_test.yml
+      - export SIGNED_API=`jq -jc ".result" signed_api.json | sed 's/\"//g'`
+      - curl -s "$SIGNED_API" -X PUT -H "Content-Type:text/yaml" --data-binary @test/performance/prodspec_perf_test.yml
+      - curl -s -H "Content-Type:application/json" --user "$BM_KEY_ID:$BM_KEY_SEC" -o signed_api.json https://a.blazemeter.com/api/v4/folders/$BM_FOLDER_ID/s3/sign?fileName=new_prodspec.json
+      - export SIGNED_API=`jq -jc ".result" signed_api.json | sed 's/\"//g'`
+      - curl -s "$SIGNED_API" -X PUT -H "Content-Type:application/json" --data-binary @test/performance/new_prodspec.json
+
+      - |
+        if [ $TEST_USER = "" ]; then
+          echo "Token Credentials not found" && exit 114;
+        fi
+
+      - echo "{\"AuthParameters\":{\"USERNAME\":\"$TEST_USER\",\"PASSWORD\":\"$TEST_PWD\"},\"AuthFlow\":\"USER_PASSWORD_AUTH\",\"ClientId\":\"$TEST_CLIENT\"}" > token_request.json
+      - curl -s -H "Content-Type:application/json" --user "$BM_KEY_ID:$BM_KEY_SEC" -o signed_api.json https://a.blazemeter.com/api/v4/folders/$BM_FOLDER_ID/s3/sign?fileName=token_request.json
+      - export SIGNED_API=`jq -jc ".result" signed_api.json | sed 's/\"//g'`
+      - curl -s "$SIGNED_API" -X PUT -H "Content-Type:application/json" --data-binary @token_request.json
+
+      - curl -X POST -H "Content-Type:application/json" --user "$BM_KEY_ID:$BM_KEY_SEC" https://a.blazemeter.com/api/v4/tests/$BM_TEST_ID/start?delayedStart=false
