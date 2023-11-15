@@ -1,0 +1,65 @@
+[
+    {
+        "account": [],
+        "agreement": [],
+        "characteristic": [
+            {
+                "@type": "Characteristic",
+                "name": "KYC Status",
+                "value": "verified"
+            },
+            {
+                "name": "creationChannel",
+                "value": "SelfCare",
+                "@type": "Characteristic"
+            },
+            {
+                "name": "createdOn",
+                "value": "2023-10-23T07:59:27.000Z",
+                "@type": "Characteristic"
+            }
+        ],
+        "contactMedium": [
+            {
+                "preferred": true,
+                "mediumType": "address",
+                "characteristic": {
+                    "street1": "26024 N Mitchell Trail",
+                    "street2": "400 Labarre Rd",
+                    "city": "Florence",
+                    "stateOrProvince": "Arkansas",
+                    "postCode": "85132",
+                    "country": "United States"
+                },
+                "@type": "ContactMedium"
+            },
+            {
+                "mediumType": "phone",
+                "characteristic": {
+                    "phoneNumber": "0123456789"
+                },
+                "@type": "ContactMedium"
+            },
+            {
+                "mediumType": "email",
+                "characteristic": {
+                    "emailAddress": "test@amdocs.com"
+                },
+                "@type": "ContactMedium"
+            }
+        ],
+        "creditProfile": [],
+        "engagedParty": {
+            "id": "653627daaced551f54903330",
+            "href": "https://api.jsonbin.io/v3/b/6552444b54105e766fcf7c53/653627daaced551f54903330",
+            "@referredType": "Individual"
+        },
+        "id": "653627dfe02793fd0cd2e01a",
+        "name": "Marcelle Walker",
+        "paymentMethod": [],
+        "relatedParty": [],
+        "status": "Approved",
+        "href": "https://api.jsonbin.io/v3/b/6552443654105e766fcf7c4d/653627dfe02793fd0cd2e01a",
+        "@type": "Customer"
+    }
+]

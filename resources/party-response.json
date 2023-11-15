@@ -1,0 +1,74 @@
+{
+    "@baseType": "Party",
+    "@type": "Individual",
+    "contactMedium": [
+        {
+            "mediumType": "address",
+            "characteristic": {
+                "street1": "26111 N pepe Trail",
+                "street2": "400 Labarre Rd"
+            },
+            "preferred": "false"
+        },
+        {
+            "mediumType": "address",
+            "characteristic": {
+                "street1": "26024 N Mitchell Trail",
+                "street2": "400 Labarre Rd"
+            },
+            "preferred": "true"
+        },
+        {
+            "mediumType": "phone",
+            "characteristic": {
+                "phoneNumber": "0123456789"
+            }
+        },
+        {
+            "mediumType": "email",
+            "characteristic": {
+                "emailAddress": "test@gmail.com"
+            },
+            "preferred": "false"
+        },
+        {
+            "mediumType": "email",
+            "characteristic": {
+                "emailAddress": "test@hotmail.com"
+            },
+            "preferred": "true"
+        }
+    ],
+    "creditRating": [],
+    "externalReference": [
+        {
+            "@type": "ExternalReference",
+            "externalReferenceType": "CognitoId",
+            "name": "0868f2e9-c794-458c-98cd-95eacbd3aed7",
+            "@baseType": "Entity"
+        }
+    ],
+    "id": "6530e980770ce58e3d892460",
+    "partyCharacteristic": [
+        {
+            "name": "creationChannel",
+            "value": "SelfCare"
+        },
+        {
+            "name": "createdOn",
+            "value": "2023-10-19T08:32:05.000Z"
+        }
+    ],
+    "relatedParty": [],
+    "taxExemptionCertificate": [],
+    "disability": [],
+    "familyName": "Cassin",
+    "givenName": "Mack",
+    "individualIdentification": [],
+    "languageAbility": [],
+    "otherName": [],
+    "skill": [],
+    "status": "initiated",
+    "href": "https://api.jsonbin.io/v3/b/6552444b54105e766fcf7c53/6530e980770ce58e3d892460",
+    "formattedName": "Mack Cassin"
+}
