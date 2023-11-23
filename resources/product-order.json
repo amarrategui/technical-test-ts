@@ -1,0 +1,278 @@
+{
+
+    "context": null,
+    "productOrder": {
+        "agreement": [],
+        "channel": [
+            {
+                "id": "b643adc5-6ba1-4123-a131-5db15348386e",
+                "role": "submitChannel"
+            }
+        ],
+        "href": "https://productorder.amdocs-dbs.com/productOrder/186643",
+        "id": "186643",
+        "note": [],
+        "orderDate": "2023-10-24T16:07:35.815Z",
+        "orderTotalPrice": [
+            {
+                "@type": "UpfrontTotalPrice",
+                "price": {
+                    "dutyFreeAmount": {
+                        "unit": "ZAR",
+                        "value": 0
+                    },
+                    "taxIncludedAmount": {
+                        "unit": "ZAR",
+                        "value": 0
+                    }
+                }
+            },
+            {
+                "price": {
+                    "dutyFreeAmount": {
+                        "unit": "ZAR",
+                        "value": 0
+                    },
+                    "taxIncludedAmount": {
+                        "unit": "ZAR",
+                        "value": 0
+                    }
+                },
+                "priceType": "one-time",
+                "recurringChargePeriod": "one-time"
+            },
+            {
+                "price": {
+                    "dutyFreeAmount": {
+                        "unit": "ZAR",
+                        "value": 0
+                    },
+                    "taxIncludedAmount": {
+                        "unit": "ZAR",
+                        "value": 0
+                    }
+                },
+                "priceType": "delivery",
+                "recurringChargePeriod": "one-time"
+            }
+        ],
+        "payment": [],
+        "productOfferingQualification": [],
+        "productOrderItem": [
+            {
+                "action": "add",
+                "id": "8ff17f4f-74b2-47ac-90b3-ba3dfeeb20aa",
+                "isSIMRequired": true,
+                "itemPrice": [
+                    {
+                        "@type": "ProductOfferingPrice",
+                        "description": "R0-NRC",
+                        "name": "R0-NRC",
+                        "price": {
+                            "@type": "ProductOfferingPrice",
+                            "dutyFreeAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            },
+                            "taxIncludedAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            },
+                            "taxRate": 0
+                        },
+                        "priceType": "one-time",
+                        "productOfferingPrice": {
+                            "@type": "ProductOfferingPrice",
+                            "href": "https://productcatalog.amdocs-dbs.com/productOfferingPrice/64e5e493adc485db11536667:(version=1)",
+                            "id": "64e5e493adc485db11536667",
+                            "name": "R0-NRC"
+                        },
+                        "recurringChargePeriod": "one-time",
+                        "unitOfMeasure": "ZAR"
+                    },
+                    {
+                        "@type": "ProductOfferingPrice",
+                        "description": "DELIVERY FEE - SHIPMENT (R0)",
+                        "name": "DELIVERY FEE - SHIPMENT (R0)",
+                        "price": {
+                            "@type": "ProductOfferingPrice",
+                            "dutyFreeAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            },
+                            "taxIncludedAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            },
+                            "taxRate": 0
+                        },
+                        "priceType": "delivery",
+                        "productOfferingPrice": {
+                            "@type": "ProductOfferingPrice",
+                            "href": "https://productcatalog.amdocs-dbs.com/productOfferingPrice/64e5e493adc485db1153666c:(version=1)",
+                            "id": "64e5e493adc485db1153666c",
+                            "name": "DELIVERY FEE - SHIPMENT (R0)"
+                        },
+                        "recurringChargePeriod": "one-time",
+                        "unitOfMeasure": "ZAR"
+                    }
+                ],
+                "itemTotalPrice": [
+                    {
+                        "@type": "UpfrontTotalPrice",
+                        "price": {
+                            "dutyFreeAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            },
+                            "taxIncludedAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            }
+                        }
+                    },
+                    {
+                        "price": {
+                            "dutyFreeAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            },
+                            "taxIncludedAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            }
+                        },
+                        "priceType": "one-time",
+                        "recurringChargePeriod": "one-time"
+                    },
+                    {
+                        "price": {
+                            "dutyFreeAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            },
+                            "taxIncludedAmount": {
+                                "unit": "ZAR",
+                                "value": 0
+                            }
+                        },
+                        "priceType": "delivery",
+                        "recurringChargePeriod": "one-time"
+                    }
+                ],
+                "product": {
+                    "place": [
+                        {
+                            "@referredType": "GeographicAddress",
+                            "@type": "GeographicAddress",
+                            "city": "Qumbu ",
+                            "locality": "Upper Culunca ",
+                            "postcode": "5180",
+                            "role": "deliveryAddress",
+                            "stateOrProvince": "Eastern Cape",
+                            "streetName": "Xola magengqane "
+                        }
+                    ],
+                    "productCharacteristic": [
+                        {
+                            "name": "delivery",
+                            "value": "Shipment",
+                            "valueType": "string"
+                        },
+                        {
+                            "name": "deliveryContactInfo",
+                            "value": "+27604515185"
+                        }
+                    ],
+                    "productPrice": [
+                        {
+                            "@type": "ProductOfferingPrice",
+                            "description": "R0-NRC",
+                            "name": "R0-NRC",
+                            "price": {
+                                "@type": "ProductOfferingPrice",
+                                "dutyFreeAmount": {
+                                    "unit": "ZAR",
+                                    "value": 0
+                                },
+                                "taxIncludedAmount": {
+                                    "unit": "ZAR",
+                                    "value": 0
+                                },
+                                "taxRate": 0
+                            },
+                            "priceType": "one-time",
+                            "productOfferingPrice": {
+                                "@type": "ProductOfferingPrice",
+                                "href": "https://productcatalog.amdocs-dbs.com/productOfferingPrice/64e5e493adc485db11536667:(version=1)",
+                                "id": "64e5e493adc485db11536667",
+                                "name": "R0-NRC"
+                            },
+                            "recurringChargePeriod": "one-time",
+                            "unitOfMeasure": "ZAR"
+                        },
+                        {
+                            "@type": "ProductOfferingPrice",
+                            "description": "DELIVERY FEE - SHIPMENT (R0)",
+                            "name": "DELIVERY FEE - SHIPMENT (R0)",
+                            "price": {
+                                "@type": "ProductOfferingPrice",
+                                "dutyFreeAmount": {
+                                    "unit": "ZAR",
+                                    "value": 0
+                                },
+                                "taxIncludedAmount": {
+                                    "unit": "ZAR",
+                                    "value": 0
+                                },
+                                "taxRate": 0
+                            },
+                            "priceType": "delivery",
+                            "productOfferingPrice": {
+                                "@type": "ProductOfferingPrice",
+                                "href": "https://productcatalog.amdocs-dbs.com/productOfferingPrice/64e5e493adc485db1153666c:(version=1)",
+                                "id": "64e5e493adc485db1153666c",
+                                "name": "DELIVERY FEE - SHIPMENT (R0)"
+                            },
+                            "recurringChargePeriod": "one-time",
+                            "unitOfMeasure": "ZAR"
+                        }
+                    ],
+                    "realizingResource": [
+                        {
+                            "@baseType": "Resource",
+                            "@type": "ICCID",
+                            "id": "6411a1572ea620b1106a875e",
+                            "value": "8927000009626879388"
+                        },
+                        {
+                            "@type": "IMSI",
+                            "href": "https://resource-inventory-management.amdocs-dbs.com/resource/6411a1572ea620b1106a875a",
+                            "id": "6411a1572ea620b1106a875a",
+                            "name": "IMSI",
+                            "value": "655102710091294"
+                        }
+                    ]
+                },
+                "productOffering": {
+                    "href": "https://productcatalog.amdocs-dbs.com/productOffering/64d0c56ec578b8d59a335464",
+                    "id": "64d0c56ec578b8d59a335464",
+                    "name": "Pay As You Go"
+                },
+                "quantity": 1,
+                "state": "inProgress"
+            }
+        ],
+        "quote": [],
+        "relatedParty": [
+            {
+                "@referredType": "Individual",
+                "href": "https://party-management.amdocs-dbs.com/individual/6537eba82d85bb53be2872fa",
+                "id": "6537eba82d85bb53be2872fa",
+                "name": "Xola "
+            }
+        ],
+        "state": "inProgress"
+    },
+    "tenantId": "63580066dd64203b3e19d26b",
+}
